@@ -25,8 +25,8 @@
 "==========================================
 
 " 修改leader键
-let mapleader = ','
-let g:mapleader = ','
+let mapleader = '\'
+let g:mapleader = '\'
 
 " 开启语法高亮
 syntax on
@@ -73,7 +73,7 @@ set shortmess=atI
 " 取消备份。 视情况自己改
 set nobackup
 " 关闭交换文件
-set noswapfile
+" set noswapfile
 
 
 " TODO: remove this, use gundo
@@ -221,7 +221,7 @@ set shiftround
 
 " A buffer becomes hidden when it is abandoned
 set hidden
-set wildmode=list:longest
+" set wildmode=list:longest
 set ttyfast
 
 " 00x增减数字时使用十进制
@@ -657,8 +657,8 @@ endif
 set background=dark
 set t_Co=256
 
-colorscheme solarized
-" colorscheme molokai
+" colorscheme solarized
+colorscheme molokai
 
 
 " 设置标记一列的背景颜色和数字一行颜色一致

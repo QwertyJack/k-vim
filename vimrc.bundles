@@ -17,7 +17,7 @@ filetype off " required! turn off
 " inspired by spf13, 自定义需要的插件集合
 if !exists('g:bundle_groups')
     " let g:bundle_groups=['python', 'javascript', 'golang', 'php', 'ruby', 'shell', 'markdown', 'html', 'css', 'less', 'coffeescript', 'tmux', 'json', 'beta']
-    let g:bundle_groups=['python', 'javascript', 'markdown', 'html', 'css', 'tmux', 'beta']
+    let g:bundle_groups=['python', 'golang', 'shell', 'markdown', 'tmux', 'json']
 endif
 
 " ----------------------------------------------------------------------------
@@ -45,7 +45,7 @@ Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 " 代码自动补全
 " 迄今为止用到的最好的自动VIM自动补全插件
 " 重启 :YcmRestartServer
-Plug 'Valloric/YouCompleteMe'
+"Plug 'Valloric/YouCompleteMe'
 " 自动补全单引号，双引号等
 Plug 'Raimondi/delimitMate'
 " 自动补全html/xml标签
@@ -159,6 +159,10 @@ Plug 'kana/vim-textobj-line'
 Plug 'kana/vim-textobj-entire'
 " 增加缩进文本对象: i   dai yai cii - 相同缩进属于同一块
 Plug 'kana/vim-textobj-indent'
+
+""" custom
+" :Tab /="
+Plug 'godlygeek/tabular'
 
 if count(g:bundle_groups, 'tmux')
     " tmux
@@ -672,14 +676,16 @@ endif
     if !exists('g:airline_symbols')
         let g:airline_symbols = {}
     endif
-    let g:airline_left_sep = '▶'
-    let g:airline_left_alt_sep = '❯'
-    let g:airline_right_sep = '◀'
-    let g:airline_right_alt_sep = '❮'
-    let g:airline_symbols.linenr = '¶'
-    let g:airline_symbols.branch = '⎇'
+    " let g:airline_left_sep       = '▶'            ''
+    " let g:airline_left_alt_sep   = '❯'            ''
+    " let g:airline_right_sep      = '◀'            ''
+    " let g:airline_right_alt_sep  = '❮'            ''
+    " let g:airline_symbols.linenr = '¶'            ''
+    " let g:airline_symbols.branch = '⎇'            ''
     " 是否打开tabline
     " let g:airline#extensions#tabline#enabled = 1
+    let g:airline_powerline_fonts = 1
+    let g:airline_theme = 'luna'
 " }}}
 
 
